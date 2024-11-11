@@ -86,13 +86,14 @@ function loadNextQuestion() {
 // Submit answer and provide feedback
 function submitAnswer(answer) {
   const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+  const explination = questions[currentQuestionIndex].explination;
   questionsAnswered++;
   if (answer === correctAnswer) {
     score++;
     showFeedback("Brilliant! Good job!");
     setTimeout(() => loadNextQuestion(), 1000);
   } else {
-    showFeedback(`Incorrect. The correct answer is: ${correctAnswer}`, false);
+    showFeedback(`Incorrect. The correct answer is: ${correctAnswer}, Explination: ${explination}`, false);
   }
   updateScoreboard();
   currentQuestionIndex++;
