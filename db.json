@@ -17,20 +17,11 @@
       "questionText": "Which image represents the HTML5 logo?",
       "type": "image-selection",
       "options": [
-        {
-            "id": "img_1",
-            "source": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/html-Logo.JPG"
-        },
-        {
-            "id": "img_2",
-            "source": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/CSS-Logo.png"
-        },
-        {
-          "id": "img_3",
-          "source": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/JavaScript-Logo-logo1.png"
-        }
+        "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/html-Logo.JPG",
+        "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/CSS-Logo.png",
+        "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/JavaScript-Logo-logo1.png"
     ],
-      "correctAnswer": "img_1",
+      "correctAnswer": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/html-Logo.JPG",
       "explination": ""
     },
     {
