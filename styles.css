@@ -1,0 +1,13 @@
+body {
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    max-width: 600px;
+    padding-top: 50px;
+  }
+  
+  #feedback-message {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }

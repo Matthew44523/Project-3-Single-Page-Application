@@ -46,17 +46,14 @@ function showQuizScreen() {
 
 // Fetch quiz data from JSONPlaceholder
 async function fetchQuizData() {
-  try {
-    const response = await fetch(`https://my-json-server.typicode.com/Matthew44523/Project-3-Single-Page-Application/quiz-data/${selectedQuiz}`);
-    if (!response.ok) throw new Error("Failed to fetch quiz data");
+    const response = await fetch(`https://my-json-server.typicode.com/Matthew44523/Project-3-Single-Page-Application/${selectedQuiz}`);
     questions = await response.json();
+    currentQuestionIndex = 0;
+    score = 0;
+    questionsAnswered = 0;
     startTime = Date.now();
     loadNextQuestion();
-    startTimer();
-  } catch (error) {
-    console.error("Error loading quiz data:", error);
   }
-}
 
 // Load the next question
 function loadNextQuestion() {
