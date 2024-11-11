@@ -17,11 +17,20 @@
       "questionText": "Which image represents the HTML5 logo?",
       "type": "image-selection",
       "options": [
-        "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-NGHwBncyA68%2FUiMm_8b2ZUI%2FAAAAAAAAAnA%2F17OGXCKI4zE%2Fs1600%2FLogo%2BHTML5.JPG&f=1&nofb=1&ipt=8f80e2a85a44c637ee1ac786c6e56ef6680897cd556966851eb9160730424c1e&ipo=images",
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FJavaScript-logo.png&f=1&nofb=1&ipt=b23e92cf2c08ab5fad751311b0bee8d04b64e78ccea55bd1a5d328ac993dccd8&ipo=images",
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngitem.com%2Fpimgs%2Fm%2F198-1985012_transparent-css3-logo-png-css-logo-transparent-background.png&f=1&nofb=1&ipt=6b7866d21479a4e233db8f5f3903db6e856cd4b2805a5c2fb023d9d8f39e95b1&ipo=images"
-      ],
-      "correctAnswer": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-NGHwBncyA68%2FUiMm_8b2ZUI%2FAAAAAAAAAnA%2F17OGXCKI4zE%2Fs1600%2FLogo%2BHTML5.JPG&f=1&nofb=1&ipt=8f80e2a85a44c637ee1ac786c6e56ef6680897cd556966851eb9160730424c1e&ipo=images",
+        {
+            "id": "img_1",
+            "source": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/html-Logo.JPG"
+        },
+        {
+            "id": "img_2",
+            "source": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/CSS-Logo.png"
+        },
+        {
+          "id": "img_3",
+          "source": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/JavaScript-Logo-logo1.png"
+        }
+    ],
+      "correctAnswer": "img_1",
       "explination": ""
     },
     {
