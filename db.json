@@ -17,7 +17,7 @@
       "questionText": "Which image represents the HTML5 logo?",
       "type": "image-selection",
       "options": [
-        "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/html-Logo.JPG",
+        "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/HTML-Logo.png",
         "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/CSS-Logo.png",
         "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/JavaScript-Logo.png"
     ],
