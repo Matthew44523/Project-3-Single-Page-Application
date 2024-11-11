@@ -153,3 +153,20 @@ function startTimer() {
     document.getElementById("elapsed-time").textContent = Math.floor((Date.now() - startTime) / 1000);
   }, 1000);
 }
+
+// Register Handlebars helper
+Handlebars.registerHelper('isImage', function(option) {
+  return option.startsWith('http') && (option.endsWith('.jpg') || option.endsWith('.jpeg') || option.endsWith('.png') || option.endsWith('.gif'));
+});
+
+// Event listener for image click in loadNextQuestion()
+if (question.options) {
+document.querySelectorAll("#options .option").forEach((element) => {
+  if (element.tagName === 'IMG') {
+    element.addEventListener("click", () => submitAnswer(element.src));
+  } else {
+    element.addEventListener("click", () => submitAnswer(element.textContent));
+  }
+});
+}
+

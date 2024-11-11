@@ -57,19 +57,23 @@
     </div>
 
     <script id="question-template" type="text/x-handlebars-template">
-        <h2>Question {{currentQuestionNumber}}:</h2>
-        <p>{{questionText}}</p>
-        {{#if options}}
-          <div id="options">
-            {{#each options}}
+      <h2>Question {{currentQuestionNumber}}:</h2>
+      <p>{{questionText}}</p>
+      {{#if options}}
+        <div id="options">
+          {{#each options}}
+            {{#if (isImage this)}}
+              <img src="{{this}}" class="option img-thumbnail mt-2" style="cursor:pointer; width: 150px; height: auto;" alt="Option Image">
+            {{else}}
               <button class="option btn btn-outline-primary mt-2">{{this}}</button>
-            {{/each}}
-          </div>
-        {{else}}
-          <input type="text" id="text-answer" class="form-control mt-2" placeholder="Type your answer here">
-          <button id="submit-text-answer" class="btn btn-primary mt-2">Submit</button>
-        {{/if}}
-      </script>
+            {{/if}}
+          {{/each}}
+        </div>
+      {{else}}
+        <input type="text" id="text-answer" class="form-control mt-2" placeholder="Type your answer here">
+        <button id="submit-text-answer" class="btn btn-primary mt-2">Submit</button>
+      {{/if}}
+  </script>
   
     </div>
 
