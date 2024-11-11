@@ -26,17 +26,18 @@ function selectQuiz(quiz) {
 
 // Start quiz
 function startQuiz(event) {
-    event.preventDefault(); // Prevent form submission from reloading the page
-    studentName = document.getElementById("name").value;
-  
-    if (!selectedQuiz) {
-      alert("Please select a quiz to start.");
-      return;
-    }
-  
-    showQuizScreen();
-    fetchQuizData();
+  event.preventDefault();
+  studentName = document.getElementById("name").value;
+
+  if (!selectedQuiz) {
+    alert("Please select a quiz to start.");
+    return;
   }
+
+  showQuizScreen();
+  fetchQuizData();
+  startTimer(); // Start the timer when the quiz begins
+}
 
 // Show quiz screen and hide welcome screen
 function showQuizScreen() {
@@ -119,6 +120,7 @@ function updateScoreboard() {
 
 // End the quiz and show result
 function endQuiz() {
+  clearInterval(timer); // Stop the timer
   document.getElementById("quiz-screen").classList.add("d-none");
   document.getElementById("result-screen").classList.remove("d-none");
   const resultMessage = score / questions.length >= 0.8
@@ -168,5 +170,16 @@ document.querySelectorAll("#options .option").forEach((element) => {
     element.addEventListener("click", () => submitAnswer(element.textContent));
   }
 });
+}
+
+function startTimer() {
+  const timerElement = document.getElementById("elapsed-time");
+  startTime = Date.now();
+
+  // Update the timer every second
+  timer = setInterval(() => {
+    const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+    timerElement.textContent = elapsedSeconds;
+  }, 1000);
 }
 
