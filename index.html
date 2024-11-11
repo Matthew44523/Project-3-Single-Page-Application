@@ -11,7 +11,27 @@
 
 <body>
 
+    <div class="container mt-5">
 
+    <div id="welcome-screen" style='text-align:center'>
+        <h1>Welcome to my Quiz Site!</h1>
+        <h3>Please enter the following information and select a quiz</h3>
+        <form id="start-form">
+          <div class="form-group">
+            <label for="name">Enter your name:</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group">
+            <label>Select a Quiz:</label>
+            <div>
+              <button type="button" class="btn btn-primary" onclick="selectQuiz('quiz1')">Quiz 1: HTML</button>
+              <button type="button" class="btn btn-success" onclick="selectQuiz('quiz2')">Quiz 2: Data Structures</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
 
 </body>
 
