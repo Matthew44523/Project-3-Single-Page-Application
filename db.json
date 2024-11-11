@@ -22,59 +22,58 @@
         "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/JavaScript-Logo.png"
     ],
       "correctAnswer": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/html-Logo.JPG",
-      "explination": ""
+      "explination": "The HTML logo has a large number 5 as we are using HTML5"
     },
     {
       "questionText": "What is the correct syntax for referring to an external JavaScript file?",
       "type": "multiple-choice",
       "options": ["<script href='file.js'>", "<script name='file.js'>", "<script src='file.js'>"],
       "correctAnswer": "<script src='file.js'>",
-      "explination": ""
+      "explination": "To use an external script, put the name of the script file in the src (source) attribute of a <script> tag"
     },
     {
       "questionText": "In HTML, which tag is used to define an unordered list?",
       "type": "text",
       "correctAnswer": "<ul>",
-      "explination": ""
+      "explination": " An unordered list starts with the <ul> tag, each list item starts with the <li> tag"
     }
   ],
   "quiz2": [
     {
-      "questionText": "Which of the following is a correct syntax for a function in Python?",
+      "questionText": "Which of the following sorting algorithms can be used to sort a random linked list with minimum time complexity?",
       "type": "multiple-choice",
-      "options": ["function myFunc()", "def myFunc()", "func myFunc()", "define myFunc()"],
-      "correctAnswer": "def myFunc()",
-      "explination": ""
+      "options": ["Quick Sort", "Heap Sort", "Merge Sort"],
+      "correctAnswer": "Merge Sort",
+      "explination": "The slow random-access performance of a linked list makes other algorithms (such as quicksort) perform poorly, and others (such as heapsort) completely impossible."
     },
     {
-      "questionText": "What does 'SQL' stand for?",
+      "questionText": "The following numbers are inserted into an empty binary search tree in the given order: 10, 1, 3, 5, 15, 12, 16. What is the height of the binary search tree (the height is the maximum distance of a leaf node from the root)?",
       "type": "text",
-      "correctAnswer": "Structured Query Language",
-      "explination": ""
+      "correctAnswer": "3",
+      "explination": "The left side of the tree with have 1 as the left child of 10, 3 as the right child of 1, and 5 as the right child of 3"
     },
     {
-      "questionText": "Which image represents the Python logo?",
+      "questionText": "Which image represents a graph data structure?",
       "type": "image-selection",
       "options": [
-        "https://example.com/python-logo1.png",
-        "https://example.com/python-logo2.png",
-        "https://example.com/python-logo3.png"
-      ],
-      "correctAnswer": "https://example.com/python-logo2.png",
-      "explination": ""
+        "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/Graph.png",
+        "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/BST.png"
+        ],
+      "correctAnswer": "https://raw.githubusercontent.com/Matthew44523/Project-3-Single-Page-Application/main/images/Graph.png",
+      "explination": "A tree is a hierarchical structure while graphs don't have to follow a hierarchical structure"
     },
     {
-      "questionText": "Which one of these operators is used for equality checking in JavaScript?",
+      "questionText": "Which data structure is based on the Last In First Out (LIFO) principle?",
       "type": "multiple-choice",
-      "options": ["==", "=", "===", "!=="],
-      "correctAnswer": "===",
-      "explination": ""
+      "options": ["Tree", "Linked List", "Stack", "Queue"],
+      "correctAnswer": "Queue",
+      "explination": "It operates like a stack of objects, making it suitable for specific-order management"
     },
     {
-      "questionText": "What is the extension for a JavaScript file?",
+      "questionText": "What is the fastest time complexity?",
       "type": "text",
-      "correctAnswer": ".js",
-      "explination": ""
+      "correctAnswer": "O(1)",
+      "explination": "The fastest time complexity is considered to be constant time, denoted as O(1)"
     }
   ]
 }
