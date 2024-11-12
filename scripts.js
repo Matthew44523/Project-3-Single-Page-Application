@@ -59,6 +59,7 @@ async function fetchQuizData() {
 // Load the next question
 function loadNextQuestion() {
   document.getElementById("feedback-screen").classList.add("d-none");
+
   if (currentQuestionIndex < questions.length) {
     const question = questions[currentQuestionIndex];
     const questionHtml = questionTemplate({
@@ -70,8 +71,16 @@ function loadNextQuestion() {
 
     // Add event listeners to answer options
     if (question.options) {
-      document.querySelectorAll("#options .option").forEach((btn) => {
-        btn.addEventListener("click", () => submitAnswer(btn.textContent));
+      document.querySelectorAll("#options .option").forEach((element) => {
+        if (element.tagName === 'IMG') { 
+          // If the option is an image, listen for clicks on `src`
+          element.addEventListener("click", () => {
+            console.log("Image clicked:", element.src); // Debugging to check src
+            submitAnswer(element.src); // Pass the image's URL as the answer
+          });
+        } else {
+          element.addEventListener("click", () => submitAnswer(element.textContent));
+        }
       });
     } else {
       document.getElementById("submit-text-answer").addEventListener("click", () => {
@@ -86,19 +95,35 @@ function loadNextQuestion() {
 
 // Submit answer and provide feedback
 function submitAnswer(answer) {
-  const correctAnswer = questions[currentQuestionIndex].correctAnswer;
-  const explination = questions[currentQuestionIndex].explination;
+  const question = questions[currentQuestionIndex];
+  const correctAnswer = question.correctAnswer;
+  const explination = question.explination;
   questionsAnswered++;
-  if (answer === correctAnswer) {
+
+  // Log both answer and correct answer for debugging
+  console.log("Submitted Answer:", answer);
+  console.log("Correct Answer:", correctAnswer);
+
+  // Handle URL comparisons in image-selection questions
+  let isCorrect;
+  if (question.type === 'image-selection') {
+    isCorrect = answer === correctAnswer; // Compare URLs directly
+  } else {
+    isCorrect = answer === correctAnswer; // For text answers, compare text
+  }
+
+  if (isCorrect) {
     score++;
     showFeedback("Brilliant! Good job!");
     setTimeout(() => loadNextQuestion(), 1000);
   } else {
-    showFeedback(`Incorrect. The correct answer is: ${correctAnswer}, Explination: ${explination}`, false);
+    showFeedback(`Incorrect. The correct answer is: ${correctAnswer}. Explanation: ${explination}`, false);
   }
+
   updateScoreboard();
   currentQuestionIndex++;
 }
+
 
 // Show feedback to user
 function showFeedback(message, isCorrect = true) {
